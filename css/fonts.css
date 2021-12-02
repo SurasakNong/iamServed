@@ -1,0 +1,12 @@
+/* @font-face */
+
+@font-face {
+    font-family: 'Merienda';
+    src: url('../fonts/Merienda/Merienda-Regular.ttf') format("truetype-variations");    
+  }
+
+@font-face {
+    font-family: 'Sriracha';
+    src: url('../fonts/Sriracha/Sriracha-Regular.ttf') format("truetype-variations");    
+  }
+

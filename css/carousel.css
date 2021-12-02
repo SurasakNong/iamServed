@@ -1,0 +1,16 @@
+
+/* CSS Variables */
+@import url(css\partials\_variables.css);
+
+
+
+/*=== Carousel Button Next And Prev ===*/
+.carousel-control-prev, .carousel-control-next{ 
+    width: 80px; 
+    font-size: 40px;
+    color: var(--primary-color);
+}
+
+/*===== End code for carousel on screen =====*/
+
+

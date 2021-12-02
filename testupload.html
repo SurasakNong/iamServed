@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Upload Files</title>
+  </head>
+
+  <body>
+    <form >
+      <input type="file" name="files[]" multiple />
+      <input type="submit" value="Upload File" name="submit" />
+      <a href="#" id="upload">Upload</a>
+    </form>
+    <script src="./js/jquery.3.6.0.js"></script>
+<script>
+ /*   
+const url = 'process.php'
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const files = document.querySelector('[type=file]').files
+  const formData = new FormData()
+
+  for (let i = 0; i < files.length; i++) {
+    let file = files[i]
+
+    formData.append('files[]', file)
+  }
+
+  fetch(url, {
+    method: 'POST',
+    body: formData,
+  }).then((response) => {
+    console.log(response)
+  })
+})*/
+
+
+$(document).on("click", "#upload", function () {
+          //const files = document.getElementById('FilePicMain');
+          const files = document.querySelector('[type=file]').files
+          const formData = new FormData()
+          console.log(files)
+
+          for (let i = 0; i < files.length; i++) {
+            let file = files[i]
+
+            formData.append('files[]', file)
+          }
+
+          fetch('process.php', {
+            method: 'POST',
+            body: formData,
+          }).then((response) => {
+            console.log(response)
+          })
+        }); 
+
+
+</script>
+  </body>
+</html>
